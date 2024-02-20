@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2 class="text-center mb-4">Forgot your password?</h2>
+
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: 'needs-validation', novalidate: true }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="mb-3">
+          <%= f.email_field :email, class: 'form-control', placeholder: 'Email', autofocus: true, autocomplete: "email", required: true %>
+        </div>
+
+        <div class="d-grid">
+          <%= f.submit "Send me reset password instructions", class: 'btn btn-primary btn-block' %>
+        </div>
+      <% end %>
+
+      <div class="d-grid text-center mb-3">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>

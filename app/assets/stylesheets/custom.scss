@@ -1,0 +1,55 @@
+/* Use Proxima Nova as the default font */
+body {
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+//   .container-custom {
+//     margin-top: 220px;
+//   }
+
+.text-center {
+  &.primary {
+    color: #3778c2;
+  }
+
+  &.margin-top-180 {
+    margin-top: 180px;
+  }
+}
+
+.btn-custom {
+  &.lg {
+    width: 60%;
+
+    @media (min-width: 992px) {
+      width: 90%;
+    }
+  }
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sacramento-regular {
+  font-family: "Sacramento", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Define custom colors */
+$primary: #3778c2;
+$secondary: #5fb523;
+$text: #434b54;
+
+/* Override Bootstrap color variables with custom colors */
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  text: $text,
+);
+
+/* Load Bootstrap styles */
+@import 'bootstrap';
