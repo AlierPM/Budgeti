@@ -7,4 +7,7 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :password, presence: true
   validates :name, presence: true
+
+  has_many :categories, foreign_key: 'user_id', dependent: :destroy
+  has_many :payments, foreign_key: 'author_id', dependent: :destroy
 end
