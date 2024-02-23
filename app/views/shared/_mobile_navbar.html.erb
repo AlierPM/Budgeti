@@ -1,15 +1,35 @@
-<nav class="navbar navbar-dark bg-primary p-2">
+<nav class="navbar navbar-dark bg-primary px-4">
   <% if user_signed_in? %>
-    <div class="navbar-left sacramento-regular">
-      <%= link_to "Budgeti", root_path, class: 'navbar-brand' %>
+  <div class="navbar-left sacramento-regular">
+     <%= link_to fa_icon('arrow-left'), categories_path, class: 'navbar-brand' %>
     </div>
     <div class="navbar-center">
-      <h1 class="navbar-text">Welcome</h1>
+      <h1 class="navbar-text"><%= controller_name.titleize %></h1>
     </div>
     <div class="navbar-right">
       <%= link_to 'Logout', destroy_user_session_path, data:{turbo_method: :delete}, class: 'navbar-text' %>
     </div>
-  <% elsif current_page?(new_user_registration_path) %>
+  <% elsif controller_name == 'categories' && action_name == 'new' %>
+    <div class="navbar-left">
+      <%= link_to fa_icon('arrow-left'), categories_path, class: 'navbar-brand' %>
+    </div>
+    <div class="navbar-center">
+      <h1 class="navbar-text">New Category</h1>
+    </div>
+    <div class="navbar-right">
+      <%= link_to 'Back to Categories', categories_path, class: 'navbar-text' %>
+    </div>
+  <% elsif controller_name == 'categories' && action_name == 'index' %>
+    <div class="navbar-left">
+      <%= link_to fa_icon('arrow-left'), root_path, class: 'navbar-brand' %>
+    </div>
+    <div class="navbar-center">
+      <h1 class="navbar-text">Categories</h1>
+    </div>
+    <div class="navbar-right">
+      <%= link_to 'New category', new_category_path, class: 'navbar-text' %>
+    </div>
+  <% elsif controller_name == 'registrations' && action_name == 'new' %>
     <div class="navbar-left">
       <%= link_to fa_icon('arrow-left'), new_user_session_path, class: 'navbar-brand' %>
     </div>
@@ -19,7 +39,7 @@
     <div class="navbar-right">
       <%= link_to 'Next', new_user_session_path, class: 'navbar-text' %>
     </div>
-    <% elsif current_page?(new_user_session_path) %>
+  <% elsif controller_name == 'sessions' && action_name == 'new' %>
     <div class="navbar-left">
       <%= link_to fa_icon('arrow-left'), root_path, class: 'navbar-brand' %>
     </div>
