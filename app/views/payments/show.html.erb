@@ -1,10 +1,11 @@
-<p style="color: green"><%= notice %></p>
+<div class="container-fluid h-screen d-flex flex-column justify-content-center p-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6 category-form">
+   
 
-<%= render @payment %>
+      <%= render @category %>
 
-<div>
-  <%= link_to "Edit this payment", edit_payment_path(@payment) %> |
-  <%= link_to "Back to payments", payments_path %>
-
-  <%= button_to "Destroy this payment", @payment, method: :delete %>
+  
+    </div>
+  </div>
 </div>

@@ -1,14 +1,24 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Payments</h1>
-
-<div id="payments">
-  <% @payments.each do |payment| %>
-    <%= render payment %>
-    <p>
-      <%= link_to "Show this payment", payment %>
-    </p>
-  <% end %>
+<div class="bg-primary">
+  <div class="container">
+    <div class="d-flex justify-content-center justify-content-md-end">
+      <%= link_to "Most Recent", category_payments_path(@category, order: 'recent'), class: "btn btn-primary" %>
+      <%= link_to "Ancient", category_payments_path(@category, order: 'ancient'), class: "btn btn-primary ml-md-2" %>
+    </div>
+  </div>
 </div>
-
-<%= link_to "New payment", new_payment_path %>
+<div class="container-lg">
+  <div class="container-lg mt-4 bg-gray-300 shadow">
+    <div class="d-flex justify-content-between text-secondary  my-2 py-3">
+      <p class="font-weight-medium text-xl">Total Transactions</p>
+      <p class="text-center font-weight-bold text-xl"><%= number_to_currency(@category.payments.sum(:amount), unit: '$') %></p>
+    </div>
+    <div id="payments">
+      <% @payments.each do |payment| %>
+        <%= render payment %>
+      <% end %>
+    </div>
+  </div>
+  <div class="d-grid text-center mb-3 fixed bottom-0 left-0 right-0 mt-4 bg-success p-5 lg:w-2/5 mx-auto">
+      <%= link_to "Add New Category", new_category_payment_path, class: "btn btn-success btn-block text-lg font-medium text-white text-center" %>
+    </div>
+</div>
