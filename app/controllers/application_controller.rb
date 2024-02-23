@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
   before_action :update_permitted_parameters, if: :devise_controller?
-  #   def after_sign_in_path_for(_resource)
-  #     catogories_path
-  #   end
+  def after_sign_in_path_for(_resource)
+    categories_path
+  end
 
   protected
 
