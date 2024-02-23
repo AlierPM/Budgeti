@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  resources :payments
-  resources :categories
+
+  resources :categories do
+    resources :payments
+  end
+
   get 'home/index'
   devise_for :users
   root 'home#index'
