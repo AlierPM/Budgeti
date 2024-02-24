@@ -1,0 +1,82 @@
+/* Use Proxima Nova as the default font */
+body {
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+/* Custom styles for flash messages */
+.flash-messages .alert-success {
+  background-color: #dff0d8; /* Green background for success */
+}
+
+.flash-messages .alert-danger {
+  background-color: #f2dede; /* Red background for danger */
+}
+
+.no-padding-margin {
+  margin: 0;
+  padding: 0;
+}
+
+//   .container-custom {
+//     margin-top: 220px;
+//   }
+
+.text-center {
+  &.primary {
+    color: #3778c2;
+  }
+
+  &.margin-top-180 {
+    margin-top: 180px;
+  }
+}
+
+.btn-custom {
+  &.lg {
+    width: 60%;
+
+    @media (min-width: 992px) {
+      width: 90%;
+    }
+  }
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sacramento-regular {
+  font-family: "Sacramento", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Defined custom colors */
+$primary: #3778c2;
+$secondary: #5fb523;
+$text: #434b54;
+
+/* Override Bootstrap color variables with custom colors */
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  text: $text,
+);
+
+.text-secondary:hover {
+  color: #5fb523; /* Change this to your desired hover color */
+}
+
+/* Load Bootstrap styles */
+@import 'bootstrap';
+
+.alert-notice {
+  background-color: #dff0d8; /* Green background for notice */
+}
+
+.alert-alert,
+.alert-error {
+  background-color: #f2dede; /* Red background for alert and error */
+}
