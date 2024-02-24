@@ -27,7 +27,7 @@
     - [Run Project](#run-project)
     - [Run Tests](#run-tests)
   - [👥 Contributors](#contributors)
-  - [🔍 What's Next?](#whats-next)
+  - [🔍 Future features?](#future-features)
   - [🤝 Let's Collaborate](#lets-collaborate)
   - [⭐️ Star It](#star-it)
   - [🙏 Acknowledgments](#acknowledgements)
@@ -171,8 +171,7 @@ Meet the masterminds behind Budgeti.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- WHAT'S NEXT? -->
-🔍 What's Next? <a name="whats-next"></a>
-## 🔮 What's Cooking Next? <a name="whats-cooking-next"></a>
+## 🔍 Future features? <a name="future-features"></a>
 Budgeti is always evolving. Here's a taste of what's cooking next:
 
 - [ ] **Expense Categories**
