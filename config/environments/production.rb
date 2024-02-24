@@ -91,3 +91,20 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
+
+# config/environments/production.rb
+Rails.application.configure do
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'budgeti-nl4j.onrender.com', # Replace with your actual domain
+    user_name: ENV['GMAIL_USERNAME'],
+    password: ENV['GMAIL_PASSWORD'],
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
+
+  # Specify the default host for action mailer
+  config.action_mailer.default_url_options = { host: 'budgeti-nl4j.onrender.com' }
+end
