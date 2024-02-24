@@ -1,6 +1,6 @@
 /* Use Proxima Nova as the default font */
 body {
-  font-family: 'Proxima Nova', sans-serif;
+  font-family: 'Proxima Nova', sans-serif !important;
 }
 
 /* Custom styles for flash messages */
@@ -16,10 +16,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
-//   .container-custom {
-//     margin-top: 220px;
-//   }
 
 .text-center {
   &.primary {
@@ -39,6 +35,14 @@ body {
       width: 90%;
     }
   }
+}
+
+.outline_border {
+  outline: 1px solid white;
+}
+
+.pb-8 {
+  padding-bottom: 8rem;
 }
 
 .pacifico-regular {

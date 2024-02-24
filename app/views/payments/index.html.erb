@@ -13,7 +13,7 @@
     <%= render 'shared/flash_messages' %>
   </div>
 
-<div class="container-fluid">
+<div class="container-fluid pb-8">
   <div class="container-lg mt-4">
     <div class="card bg-gray-300 shadow">
       <div class="card-body d-flex justify-content-between text-secondary">
@@ -32,6 +32,6 @@
   </div>
 
 </div>
-  <div class="fixed-bottom fixed-left fixed-right bg-success p-3">
-    <%= link_to " Add New Payment", new_category_payment_path(@category), class: "btn btn-success d-block w-100 p-3 text-lg font-weight-bold text-center text-white" %>
+  <div class="fixed-bottom fixed-left fixed-right bg-secondary p-3">
+    <%= link_to " Add New Payment", new_category_payment_path(@category), class: "btn btn-success d-block w-100 p-3 text-lg font-weight-bold text-center text-white outline_border" %>
   </div>
