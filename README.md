@@ -73,6 +73,15 @@ Welcome to Budgeti, your go-to app for managing personal finances. Take control 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+### Live Demo & Features presentation
+
+[Check out the Live Demo](https://budgeti-nl4j.onrender.com/)
+
+[check out the features presentation here](https://www.loom.com/share/cfc94d0344e14b339ab7a6cb9e111d1d?sid=e688e735-b201-414d-877d-e097edafe1bb)
+
+ 
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
