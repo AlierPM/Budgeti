@@ -1,8 +1,11 @@
-<div class="container-lg", style="margin-top: 100px">
+<!-- Display Flash Messages -->
+<%= render 'shared/flash_messages' %>
+
+<div class="container-lg" style="margin-top: 100px">
   <div class="lg:w-2/5 w-100 mx-auto flex flex-col border p-2 h-full">
     <% if user_signed_in? %>
-    <p class="text-secondary text-center">Welcome, <%= current_user.name %> to Budgeti!</p>
-  <% end %>
+      <p class="text-secondary text-center">Welcome, <%= current_user.name %> to Budgeti!</p>
+    <% end %>
     
     <div class="border m-2 p-2 shadow">
       <div class="d-flex justify-content-between flex-grow-1 text-secondary">
@@ -11,7 +14,7 @@
       </div>
       
       <% if @over_budget %>
-        <p class="mt-1 text-danger font-medium">You exceeded your Budget by : <b>$<%= @difference %></b></p>
+        <p class="mt-1 text-danger font-medium">You exceeded your Budget by: <b>$<%= @difference %></b></p>
       <% end %>
     </div>
     
@@ -22,10 +25,11 @@
         </a>
       <% end %>
     </div>
-
   </div>
-<%= render 'shared/pagination' %>
-    <div class="d-grid text-center mb-3 fixed bottom-0 left-0 right-0 mt-4 bg-success p-5 lg:w-2/5 mx-auto">
-      <%= link_to "Add New Category", new_category_path, class: "btn btn-success btn-block text-lg font-medium text-white text-center" %>
-    </div>
+
+  <%= render 'shared/pagination' %>
+</div>
+
+<div class="fixed-bottom fixed-left fixed-right bg-success p-3">
+  <%= link_to "Add New Category", new_category_path, class: "btn btn-success d-block w-100 p-3 text-lg font-weight-bold text-center text-white" %>
 </div>
