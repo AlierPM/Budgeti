@@ -3,6 +3,15 @@ body {
   font-family: 'Proxima Nova', sans-serif;
 }
 
+/* Custom styles for flash messages */
+.flash-messages .alert-success {
+  background-color: #dff0d8; /* Green background for success */
+}
+
+.flash-messages .alert-danger {
+  background-color: #f2dede; /* Red background for danger */
+}
+
 .no-padding-margin {
   margin: 0;
   padding: 0;
