@@ -13,8 +13,6 @@ class CategoriesController < ApplicationController
 
     @over_budget = true
     @difference = @total - @budget
-
-    @categories = Category.paginate(page: params[:page], per_page: 3)
   end
 
   # GET /categories/new
