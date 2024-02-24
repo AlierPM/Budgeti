@@ -1,12 +1,12 @@
 databases:
-  - name: Budgeti
-    databaseName: Budgeti
+  - name: budgeti
+    databaseName: budgeti
     user: pam
     plan: free
 
 services:
   - type: web
-    name: Budgeti
+    name: budgeti
     runtime: ruby
     plan: free
     buildCommand: "./bin/render-build.sh"
